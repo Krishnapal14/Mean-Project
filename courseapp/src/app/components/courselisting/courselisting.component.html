@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+    <button class="btn btn-primary mt-2 mb-2" (click)="loadEmpInfo()">
+      Load Employee Info
+    </button>
+  </div>
+  <div *ngIf = 'flag'>
+    <table class="table table-bordered table-hover table-condensed table-striped">
+        <thead>
+          <tr>
+            <th>Emp Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let emps of emp'>
+            <td>{{ emps.id }}</td>
+            <td>{{ emps.Name }}</td>
+            <td>{{ emps.Salary }}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <div>
+    <app-create-emp-info></app-create-emp-info>
+  </div>
+</div>

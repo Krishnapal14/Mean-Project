@@ -1,0 +1,25 @@
+<div>
+  <h1>Create Database</h1>
+</div>
+<div>
+  <form #userInfo="ngForm" (ngSubmit)="createUser(userInfo.value)">
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" name="empid" [(ngModel)]="empId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="empName" [(ngModel)]="empName" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label>Salary</label>
+          <input type="text" name="empSalary" [(ngModel)]="empSalary" class="form-control" />
+        </div>
+        <div class="form-group">
+       <button class="btn btn-primary">Submit</button>
+      </div>
+      <div>
+        {{ msg }}
+      </div>
+  </form>
+</div>
